@@ -1,0 +1,257 @@
+ * Restarting DNS forwarder and DHCP server dnsmasq
+   ...done.
+[Modelarts Service Log]user: uid=1101(work) gid=1101(work) groups=1101(work)
+[Modelarts Service Log]pwd: /home/work
+[Modelarts Service Log]app_url: s3://xyz--001/code/src/
+[Modelarts Service Log]boot_file: src/run.py
+[Modelarts Service Log]log_url: /tmp/log/xyz-1128-5.log
+[Modelarts Service Log]command: src/run.py --data_url=s3://xyz--001/dataset-xianpic/train_data/train_data/ --num_classes=54 --deploy_script_path=s3://xyz--001/code/src/deploy_scripts/ --max_epochs=6 --train_url=s3://xyz--001/model-test-3/
+[Modelarts Service Log]MODELARTS_IPOIB_DEVICE: 
+[Modelarts Service Log]dependencies_file_dir: /home/work/user-job-dir/src
+[Modelarts Service Log][modelarts_create_log] modelarts-pipe found
+INFO:root:Using MoXing-v1.14.0-c5b88128
+INFO:root:Using OBS-Python-SDK-3.1.2
+[ModelArts Service Log]2019-11-28 21:21:57,334 - modelarts-downloader.py[line:547] - INFO: Main: modelarts-downloader starting with Namespace(dst='./', recursive=True, src='s3://xyz--001/code/src/', trace=False, verbose=False)
+/home/work/user-job-dir
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+INFO:root:Using MoXing-v1.14.0-c5b88128
+INFO:root:Using OBS-Python-SDK-3.1.2
+INFO:root:Listing OBS: 1000
+INFO:root:Listing OBS: 2000
+INFO:root:Listing OBS: 3000
+INFO:root:Listing OBS: 4000
+INFO:root:Listing OBS: 5000
+INFO:root:Listing OBS: 6000
+INFO:root:Listing OBS: 7000
+INFO:root:pid: None.	1000/7462
+INFO:root:pid: None.	2000/7462
+INFO:root:pid: None.	3000/7462
+INFO:root:pid: None.	4000/7462
+INFO:root:pid: None.	5000/7462
+INFO:root:pid: None.	6000/7462
+INFO:root:pid: None.	7000/7462
+Using TensorFlow backend.
+['/cache/train_data/img_2996.jpg' '/cache/train_data/img_4057.jpg'
+ '/cache/train_data/img_783.jpg' ... '/cache/train_data/img_2088.jpg'
+ '/cache/train_data/img_693.jpg' '/cache/train_data/img_803.jpg']
+total samples: 3731, training samples: 3231, validation samples: 500
+WARNING:tensorflow:From /home/work/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-11-28 21:22:15.148183: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-11-28 21:22:15.154901: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3000000000 Hz
+2019-11-28 21:22:15.156848: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563a6f5c8910 executing computations on platform Host. Devices:
+2019-11-28 21:22:15.156893: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+/cache/user-job-dir/src/models/resnet50.py:643: UserWarning: The output shape of `ResNet50(include_top=False)` has been changed since Keras 2.2.0.
+  warnings.warn('The output shape of `ResNet50(include_top=False)` '
+Downloading data from https://ma-competitions-bj4.obs.cn-north-4.myhuaweicloud.com:443/model_zoo/tensorflow/resnet/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
+
+    8192/94653016 [..............................] - ETA: 1s
+ 2605056/94653016 [..............................] - ETA: 4s
+10985472/94653016 [==>...........................] - ETA: 1s
+17203200/94653016 [====>.........................] - ETA: 1s
+25149440/94653016 [======>.......................] - ETA: 0s
+33529856/94653016 [=========>....................] - ETA: 0s
+39116800/94653016 [===========>..................] - ETA: 0s
+45129728/94653016 [=============>................] - ETA: 0s
+50323456/94653016 [==============>...............] - ETA: 0s
+58212352/94653016 [=================>............] - ETA: 0s
+62455808/94653016 [==================>...........] - ETA: 0s
+77062144/94653016 [=======================>......] - ETA: 0s
+90079232/94653016 [===========================>..] - ETA: 0s
+94658560/94653016 [==============================] - 1s 0us/step
+Epoch 1/6
+
+ 1/26 [>.............................] - ETA: 16:45 - loss: 0.0293 - acc: 0.0469
+ 2/26 [=>............................] - ETA: 14:48 - loss: 0.0285 - acc: 0.0469
+ 3/26 [==>...........................] - ETA: 13:49 - loss: 0.0292 - acc: 0.0443
+ 4/26 [===>..........................] - ETA: 10:43 - loss: 0.0278 - acc: 0.0493
+ 5/26 [====>.........................] - ETA: 10:34 - loss: 0.0273 - acc: 0.0535
+ 6/26 [=====>........................] - ETA: 10:14 - loss: 0.0272 - acc: 0.0537
+ 7/26 [=======>......................] - ETA: 9:48 - loss: 0.0269 - acc: 0.0583 
+ 8/26 [========>.....................] - ETA: 9:22 - loss: 0.0268 - acc: 0.0579
+ 9/26 [=========>....................] - ETA: 8:51 - loss: 0.0265 - acc: 0.0601
+10/26 [==========>...................] - ETA: 8:19 - loss: 0.0261 - acc: 0.0643
+11/26 [===========>..................] - ETA: 7:48 - loss: 0.0256 - acc: 0.0662
+12/26 [============>.................] - ETA: 7:16 - loss: 0.0251 - acc: 0.0731
+13/26 [==============>...............] - ETA: 6:45 - loss: 0.0246 - acc: 0.0765
+14/26 [===============>..............] - ETA: 6:14 - loss: 0.0241 - acc: 0.0855
+15/26 [================>.............] - ETA: 5:42 - loss: 0.0236 - acc: 0.0970
+16/26 [=================>............] - ETA: 5:11 - loss: 0.0232 - acc: 0.1017
+17/26 [==================>...........] - ETA: 4:40 - loss: 0.0226 - acc: 0.1132
+18/26 [===================>..........] - ETA: 4:08 - loss: 0.0222 - acc: 0.1212
+19/26 [====================>.........] - ETA: 3:37 - loss: 0.0218 - acc: 0.1288
+20/26 [======================>.......] - ETA: 3:06 - loss: 0.0214 - acc: 0.1396
+21/26 [=======================>......] - ETA: 2:35 - loss: 0.0211 - acc: 0.1474
+22/26 [========================>.....] - ETA: 2:04 - loss: 0.0207 - acc: 0.1567
+23/26 [=========================>....] - ETA: 1:32 - loss: 0.0205 - acc: 0.1652
+24/26 [==========================>...] - ETA: 1:01 - loss: 0.0200 - acc: 0.1781
+25/26 [===========================>..] - ETA: 30s - loss: 0.0197 - acc: 0.1882 
+26/26 [==============================] - 957s 37s/step - loss: 0.0194 - acc: 0.1970 - val_loss: 0.0116 - val_acc: 0.4640
+
+Epoch 00001: val_loss improved from inf to 0.01158, saving model to /cache/model_snapshots/weights-001-0.0116.h5
+Epoch 2/6
+
+ 1/26 [>.............................] - ETA: 14:13 - loss: 0.0073 - acc: 0.6016
+ 2/26 [=>............................] - ETA: 13:32 - loss: 0.0067 - acc: 0.6406
+ 3/26 [==>...........................] - ETA: 13:00 - loss: 0.0058 - acc: 0.6693
+ 4/26 [===>..........................] - ETA: 12:24 - loss: 0.0058 - acc: 0.6797
+ 5/26 [====>.........................] - ETA: 11:47 - loss: 0.0054 - acc: 0.6953
+ 6/26 [=====>........................] - ETA: 11:09 - loss: 0.0052 - acc: 0.7018
+ 7/26 [=======>......................] - ETA: 10:33 - loss: 0.0050 - acc: 0.7087
+ 8/26 [========>.....................] - ETA: 9:57 - loss: 0.0048 - acc: 0.7178 
+ 9/26 [=========>....................] - ETA: 9:22 - loss: 0.0047 - acc: 0.7205
+10/26 [==========>...................] - ETA: 8:48 - loss: 0.0046 - acc: 0.7297
+11/26 [===========>..................] - ETA: 8:13 - loss: 0.0044 - acc: 0.7386
+12/26 [============>.................] - ETA: 7:40 - loss: 0.0043 - acc: 0.7422
+13/26 [==============>...............] - ETA: 7:06 - loss: 0.0042 - acc: 0.7488
+14/26 [===============>..............] - ETA: 6:33 - loss: 0.0042 - acc: 0.7511
+15/26 [================>.............] - ETA: 6:00 - loss: 0.0041 - acc: 0.7536
+16/26 [=================>............] - ETA: 5:27 - loss: 0.0040 - acc: 0.7573
+17/26 [==================>...........] - ETA: 4:54 - loss: 0.0042 - acc: 0.7569
+18/26 [===================>..........] - ETA: 4:21 - loss: 0.0042 - acc: 0.7609
+19/26 [====================>.........] - ETA: 3:48 - loss: 0.0041 - acc: 0.7669
+20/26 [======================>.......] - ETA: 3:15 - loss: 0.0040 - acc: 0.7691
+21/26 [=======================>......] - ETA: 2:42 - loss: 0.0039 - acc: 0.7705
+22/26 [========================>.....] - ETA: 2:05 - loss: 0.0039 - acc: 0.7721
+23/26 [=========================>....] - ETA: 1:34 - loss: 0.0038 - acc: 0.7725
+24/26 [==========================>...] - ETA: 1:03 - loss: 0.0038 - acc: 0.7748
+25/26 [===========================>..] - ETA: 31s - loss: 0.0038 - acc: 0.7773 
+26/26 [==============================] - 988s 38s/step - loss: 0.0037 - acc: 0.7810 - val_loss: 0.0092 - val_acc: 0.6120
+
+Epoch 00002: val_loss improved from 0.01158 to 0.00921, saving model to /cache/model_snapshots/weights-002-0.0092.h5
+Epoch 3/6
+
+ 1/26 [>.............................] - ETA: 15:08 - loss: 4.1745e-04 - acc: 0.9609
+ 2/26 [=>............................] - ETA: 9:09 - loss: 4.4306e-04 - acc: 0.9482 
+ 3/26 [==>...........................] - ETA: 10:37 - loss: 7.0350e-04 - acc: 0.9551
+ 4/26 [===>..........................] - ETA: 10:47 - loss: 0.0010 - acc: 0.9487    
+ 5/26 [====>.........................] - ETA: 10:28 - loss: 9.2049e-04 - acc: 0.9527
+ 6/26 [=====>........................] - ETA: 10:06 - loss: 8.7591e-04 - acc: 0.9541
+ 7/26 [=======>......................] - ETA: 9:41 - loss: 8.8203e-04 - acc: 0.9506 
+ 8/26 [========>.....................] - ETA: 9:18 - loss: 8.1942e-04 - acc: 0.9499
+ 9/26 [=========>....................] - ETA: 8:51 - loss: 8.3175e-04 - acc: 0.9486
+10/26 [==========>...................] - ETA: 8:24 - loss: 7.6859e-04 - acc: 0.9521
+11/26 [===========>..................] - ETA: 7:55 - loss: 7.8146e-04 - acc: 0.9522
+12/26 [============>.................] - ETA: 7:24 - loss: 7.4118e-04 - acc: 0.9549
+13/26 [==============>...............] - ETA: 6:53 - loss: 7.2827e-04 - acc: 0.9560
+14/26 [===============>..............] - ETA: 6:22 - loss: 6.8738e-04 - acc: 0.9586
+15/26 [================>.............] - ETA: 5:49 - loss: 6.6456e-04 - acc: 0.9587
+16/26 [=================>............] - ETA: 5:18 - loss: 8.0255e-04 - acc: 0.9569
+17/26 [==================>...........] - ETA: 4:46 - loss: 7.7383e-04 - acc: 0.9576
+18/26 [===================>..........] - ETA: 4:14 - loss: 7.3844e-04 - acc: 0.9591
+19/26 [====================>.........] - ETA: 3:42 - loss: 7.2023e-04 - acc: 0.9588
+20/26 [======================>.......] - ETA: 3:10 - loss: 7.1465e-04 - acc: 0.9585
+21/26 [=======================>......] - ETA: 2:39 - loss: 7.3291e-04 - acc: 0.9590
+22/26 [========================>.....] - ETA: 2:07 - loss: 7.1103e-04 - acc: 0.9598
+23/26 [=========================>....] - ETA: 1:36 - loss: 6.9152e-04 - acc: 0.9608
+24/26 [==========================>...] - ETA: 1:04 - loss: 6.7386e-04 - acc: 0.9618
+25/26 [===========================>..] - ETA: 32s - loss: 6.8267e-04 - acc: 0.9605 
+26/26 [==============================] - 1002s 39s/step - loss: 6.8881e-04 - acc: 0.9603 - val_loss: 0.0097 - val_acc: 0.6600
+
+Epoch 00003: val_loss did not improve from 0.00921
+Epoch 4/6
+
+ 1/26 [>.............................] - ETA: 13:37 - loss: 1.5546e-04 - acc: 0.9766
+ 2/26 [=>............................] - ETA: 12:58 - loss: 2.6360e-04 - acc: 0.9766
+ 3/26 [==>...........................] - ETA: 12:25 - loss: 1.8262e-04 - acc: 0.9844
+ 4/26 [===>..........................] - ETA: 11:52 - loss: 1.5254e-04 - acc: 0.9883
+ 5/26 [====>.........................] - ETA: 11:19 - loss: 1.2931e-04 - acc: 0.9906
+ 6/26 [=====>........................] - ETA: 10:46 - loss: 1.6593e-04 - acc: 0.9896
+ 7/26 [=======>......................] - ETA: 10:15 - loss: 1.5410e-04 - acc: 0.9900
+ 8/26 [========>.....................] - ETA: 9:42 - loss: 1.4630e-04 - acc: 0.9893 
+ 9/26 [=========>....................] - ETA: 9:09 - loss: 1.5550e-04 - acc: 0.9887
+10/26 [==========>...................] - ETA: 8:36 - loss: 1.4336e-04 - acc: 0.9898
+11/26 [===========>..................] - ETA: 8:04 - loss: 1.4686e-04 - acc: 0.9901
+12/26 [============>.................] - ETA: 7:32 - loss: 1.9008e-04 - acc: 0.9896
+13/26 [==============>...............] - ETA: 7:00 - loss: 1.8398e-04 - acc: 0.9892
+14/26 [===============>..............] - ETA: 6:27 - loss: 1.8496e-04 - acc: 0.9894
+15/26 [================>.............] - ETA: 5:55 - loss: 1.7588e-04 - acc: 0.9896
+16/26 [=================>............] - ETA: 5:23 - loss: 1.6710e-04 - acc: 0.9902
+17/26 [==================>...........] - ETA: 4:52 - loss: 1.6081e-04 - acc: 0.9903
+18/26 [===================>..........] - ETA: 4:21 - loss: 1.5365e-04 - acc: 0.9909
+19/26 [====================>.........] - ETA: 3:49 - loss: 1.4838e-04 - acc: 0.9910
+20/26 [======================>.......] - ETA: 3:08 - loss: 1.4920e-04 - acc: 0.9914
+21/26 [=======================>......] - ETA: 2:37 - loss: 1.4646e-04 - acc: 0.9911
+22/26 [========================>.....] - ETA: 2:06 - loss: 1.4110e-04 - acc: 0.9915
+23/26 [=========================>....] - ETA: 1:34 - loss: 1.4822e-04 - acc: 0.9908
+24/26 [==========================>...] - ETA: 1:02 - loss: 1.4740e-04 - acc: 0.9906
+25/26 [===========================>..] - ETA: 31s - loss: 1.6672e-04 - acc: 0.9906 
+26/26 [==============================] - 964s 37s/step - loss: 1.6446e-04 - acc: 0.9904 - val_loss: 0.0089 - val_acc: 0.7040
+
+Epoch 00004: val_loss improved from 0.00921 to 0.00886, saving model to /cache/model_snapshots/weights-004-0.0089.h5
+Epoch 5/6
+
+ 1/26 [>.............................] - ETA: 13:26 - loss: 9.8512e-05 - acc: 0.9844
+ 2/26 [=>............................] - ETA: 12:42 - loss: 7.2625e-05 - acc: 0.9922
+ 3/26 [==>...........................] - ETA: 12:07 - loss: 6.8914e-05 - acc: 0.9896
+ 4/26 [===>..........................] - ETA: 11:31 - loss: 6.7471e-05 - acc: 0.9902
+ 5/26 [====>.........................] - ETA: 11:00 - loss: 6.6431e-05 - acc: 0.9906
+ 6/26 [=====>........................] - ETA: 10:27 - loss: 6.0691e-05 - acc: 0.9922
+ 7/26 [=======>......................] - ETA: 9:55 - loss: 5.7617e-05 - acc: 0.9933 
+ 8/26 [========>.....................] - ETA: 9:23 - loss: 6.3293e-05 - acc: 0.9932
+ 9/26 [=========>....................] - ETA: 8:51 - loss: 7.4198e-05 - acc: 0.9922
+10/26 [==========>...................] - ETA: 7:43 - loss: 8.3875e-05 - acc: 0.9897
+11/26 [===========>..................] - ETA: 7:17 - loss: 8.5650e-05 - acc: 0.9900
+12/26 [============>.................] - ETA: 6:50 - loss: 8.1243e-05 - acc: 0.9908
+13/26 [==============>...............] - ETA: 6:23 - loss: 7.6813e-05 - acc: 0.9915
+14/26 [===============>..............] - ETA: 5:54 - loss: 7.3877e-05 - acc: 0.9916
+15/26 [================>.............] - ETA: 5:26 - loss: 8.3111e-05 - acc: 0.9906
+16/26 [=================>............] - ETA: 4:57 - loss: 7.9334e-05 - acc: 0.9911
+17/26 [==================>...........] - ETA: 4:28 - loss: 7.6705e-05 - acc: 0.9912
+18/26 [===================>..........] - ETA: 3:59 - loss: 9.4545e-05 - acc: 0.9908
+19/26 [====================>.........] - ETA: 3:30 - loss: 1.0144e-04 - acc: 0.9905
+20/26 [======================>.......] - ETA: 3:00 - loss: inf - acc: 0.9906       
+21/26 [=======================>......] - ETA: 2:31 - loss: nan - acc: 0.9456
+22/26 [========================>.....] - ETA: 2:01 - loss: nan - acc: 0.9041
+23/26 [=========================>....] - ETA: 1:31 - loss: nan - acc: 0.8654
+24/26 [==========================>...] - ETA: 1:00 - loss: nan - acc: 0.8304
+25/26 [===========================>..] - ETA: 30s - loss: nan - acc: 0.7984 
+26/26 [==============================] - 948s 36s/step - loss: nan - acc: 0.7690 - val_loss: nan - val_acc: 0.0260
+
+Epoch 00005: val_loss did not improve from 0.00886
+Epoch 6/6
+
+ 1/26 [>.............................] - ETA: 13:45 - loss: nan - acc: 0.0312
+ 2/26 [=>............................] - ETA: 13:04 - loss: nan - acc: 0.0312
+ 3/26 [==>...........................] - ETA: 12:31 - loss: nan - acc: 0.0260
+ 4/26 [===>..........................] - ETA: 11:56 - loss: nan - acc: 0.0195
+ 5/26 [====>.........................] - ETA: 11:22 - loss: nan - acc: 0.0203
+ 6/26 [=====>........................] - ETA: 10:48 - loss: nan - acc: 0.0208
+ 7/26 [=======>......................] - ETA: 10:13 - loss: nan - acc: 0.0223
+ 8/26 [========>.....................] - ETA: 9:38 - loss: nan - acc: 0.0244 
+ 9/26 [=========>....................] - ETA: 9:04 - loss: nan - acc: 0.0260
+10/26 [==========>...................] - ETA: 8:31 - loss: nan - acc: 0.0258
+11/26 [===========>..................] - ETA: 7:58 - loss: nan - acc: 0.0241
+12/26 [============>.................] - ETA: 7:25 - loss: nan - acc: 0.0228
+13/26 [==============>...............] - ETA: 6:53 - loss: nan - acc: 0.0222
+14/26 [===============>..............] - ETA: 6:21 - loss: nan - acc: 0.0234
+15/26 [================>.............] - ETA: 5:50 - loss: nan - acc: 0.0240
+16/26 [=================>............] - ETA: 5:18 - loss: nan - acc: 0.0229
+17/26 [==================>...........] - ETA: 4:46 - loss: nan - acc: 0.0230
+18/26 [===================>..........] - ETA: 4:15 - loss: nan - acc: 0.0217
+19/26 [====================>.........] - ETA: 3:43 - loss: nan - acc: 0.0243
+20/26 [======================>.......] - ETA: 3:11 - loss: nan - acc: 0.0234
+21/26 [=======================>......] - ETA: 2:39 - loss: nan - acc: 0.0238
+22/26 [========================>.....] - ETA: 2:07 - loss: nan - acc: 0.0241
+23/26 [=========================>....] - ETA: 1:32 - loss: nan - acc: 0.0259
+24/26 [==========================>...] - ETA: 1:01 - loss: nan - acc: 0.0258
+25/26 [===========================>..] - ETA: 30s - loss: nan - acc: 0.0263 
+26/26 [==============================] - 951s 37s/step - loss: nan - acc: 0.0265 - val_loss: nan - val_acc: 0.0260
+
+Epoch 00006: val_loss did not improve from 0.00886
+training done!
+save events log file to OBS path:  s3://xyz--001/model-test-3/
+WARNING:tensorflow:From /home/work/anaconda3/lib/python3.6/site-packages/tensorflow/python/saved_model/signature_def_utils_impl.py:205: build_tensor_info (from tensorflow.python.saved_model.utils_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.utils.build_tensor_info or tf.compat.v1.saved_model.build_tensor_info.
+WARNING:tensorflow:From /cache/user-job-dir/src/save_model.py:52: calling SavedModelBuilder.add_meta_graph_and_variables (from tensorflow.python.saved_model.builder_impl) with legacy_init_op is deprecated and will be removed in a future version.
+Instructions for updating:
+Pass your op to the equivalent parameter main_op instead.
+INFO:tensorflow:No assets to save.
+INFO:tensorflow:No assets to write.
+INFO:tensorflow:SavedModel written to: /cache/model_snapshots/model/saved_model.pb
+save pb to local path success
+copy pb to s3://xyz--001/model-test-3/ success
+copy config.json and customize_service.py success
+end

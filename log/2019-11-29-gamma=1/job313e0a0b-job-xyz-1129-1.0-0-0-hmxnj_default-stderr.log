@@ -1,0 +1,6 @@
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/xyz-1129-1.log
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/xyz-1129-1.log
+[ModelArts Service Log]modelarts-pipe: will write log file /tmp/log/xyz-1129-1.log
+[ModelArts Service Log]modelarts-pipe: param for max log length: 1073741824
+[ModelArts Service Log]modelarts-pipe: param for whether exit on overflow: 0
+[ModelArts Service Log]modelarts-pipe: total length: 17481

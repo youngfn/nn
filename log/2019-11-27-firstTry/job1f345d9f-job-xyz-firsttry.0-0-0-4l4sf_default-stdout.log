@@ -1,0 +1,44 @@
+ * Restarting DNS forwarder and DHCP server dnsmasq
+   ...done.
+[Modelarts Service Log]user: uid=1101(work) gid=1101(work) groups=1101(work)
+[Modelarts Service Log]pwd: /home/work
+[Modelarts Service Log]app_url: s3://xyz--001/code/src/
+[Modelarts Service Log]boot_file: src/run.py
+[Modelarts Service Log]log_url: /tmp/log/xyz-firstTry.log
+[Modelarts Service Log]command: src/run.py --data_url=s3://xyz--001/dataset-xianpic/train_data/ --num_classes=54 --deploy_script_path=s3://xyz--001/code/src/deploy_scripts/ --max_epochs=6 --train_url=s3://xyz--001/model-test/
+[Modelarts Service Log]MODELARTS_IPOIB_DEVICE: 
+[Modelarts Service Log]dependencies_file_dir: /home/work/user-job-dir/src
+[Modelarts Service Log][modelarts_create_log] modelarts-pipe found
+INFO:root:Using MoXing-v1.14.0-c5b88128
+INFO:root:Using OBS-Python-SDK-3.1.2
+[ModelArts Service Log]2019-11-27 00:08:04,260 - modelarts-downloader.py[line:547] - INFO: Main: modelarts-downloader starting with Namespace(dst='./', recursive=True, src='s3://xyz--001/code/src/', trace=False, verbose=False)
+/home/work/user-job-dir
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+INFO:root:Using MoXing-v1.14.0-c5b88128
+INFO:root:Using OBS-Python-SDK-3.1.2
+INFO:root:Listing OBS: 1000
+INFO:root:Listing OBS: 2000
+INFO:root:Listing OBS: 3000
+INFO:root:Listing OBS: 4000
+INFO:root:Listing OBS: 5000
+INFO:root:Listing OBS: 6000
+INFO:root:Listing OBS: 7000
+INFO:root:pid: None.	1000/7463
+INFO:root:pid: None.	2000/7463
+INFO:root:pid: None.	3000/7463
+INFO:root:pid: None.	4000/7463
+INFO:root:pid: None.	5000/7463
+INFO:root:pid: None.	6000/7463
+INFO:root:pid: None.	7000/7463
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "src/run.py", line 189, in <module>
+    tf.app.run()
+  File "/home/work/anaconda2/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 125, in run
+    _sys.exit(main(argv))
+  File "src/run.py", line 178, in main
+    from train import train_model
+  File "/cache/user-job-dir/src/train.py", line 15, in <module>
+    from models.resnet50 import ResNet50
+  File "/cache/user-job-dir/src/models/resnet50.py", line 45
+SyntaxError: Non-ASCII character '\xe8' in file /cache/user-job-dir/src/models/resnet50.py on line 45, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
